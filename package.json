@@ -4,7 +4,8 @@
   "description": "travel itinerary maker",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "lint": "eslint src"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,25 @@
   "bugs": {
     "url": "https://github.com/jmancherje/itinerary_maker/issues"
   },
-  "homepage": "https://github.com/jmancherje/itinerary_maker#readme"
+  "homepage": "https://github.com/jmancherje/itinerary_maker#readme",
+  "devDependencies": {
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^6.0.1",
+    "babel-preset-es2015": "^6.0.15",
+    "babel-preset-react": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
+    "eslint": "^1.10.3",
+    "eslint-plugin-react": "^3.6.2",
+    "react-hot-loader": "^1.3.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "dependencies": {
+    "axios": "^0.9.1",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "react-redux": "^4.4.0",
+    "redux": "^3.3.1"
+  }
 }
