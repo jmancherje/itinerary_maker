@@ -10,20 +10,10 @@ const store = createStore(reducer)
 
 const render = () => {
   ReactDOM.render(
-  <Counter 
-    value={store.getState()}
-    onIncrement={() => 
-      store.dispatch({
-        type: 'INCREMENT'
-      })
-    }
-    onDecrement={() => 
-      store.dispatch({
-        type: 'DECREMENT'
-      })
-    }
-  />,
-  document.querySelector('#root')
+    <Provider store={store}>
+      <App />
+    </Provider>,
+    document.getElementById('root')
   )
 }
 
@@ -32,15 +22,15 @@ render()
 
 
 // toggle todo function:
-const toggleTodo = (todo) => {
-  return Object.assign({}, todo, {
-    completed: !todo.completed
-  });
-};
+// const toggleTodo = (todo) => {
+//   return Object.assign({}, todo, {
+//     completed: !todo.completed
+//   });
+// };
 
-const toggleTodoWithSpread = (todo) => {
-  return {
-    ...todo,
-    completed: !todo.completed
-  };
-};
+// const toggleTodoWithSpread = (todo) => {
+//   return {
+//     ...todo,
+//     completed: !todo.completed
+//   };
+// };
