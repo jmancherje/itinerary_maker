@@ -1,8 +1,25 @@
-// export const CREATE_ITINERARY = 'CREATE_ITINERARY'
-// export const FETCH_PEOPLE = 'FETCH_PEOPLE'
-// export const RECEIVE_PEOPLE = 'RECEIVE_PEOPLE'
-// export const INCREMENT = 'INCREMENT'
-// export const DECREMENT = 'DECREMENT'
+export const INCREMENT = 'INCREMENT'
+export const DECREMENT = 'DECREMENT'
+export const ADD_TODO = 'ADD_TODO'
+export const TOGGLE_TODO = 'TOGGLE_TODO'
+
+let nextTodoId = 0
+
+export const addTodo = (text) => {
+  return {
+    type: ADD_TODO,
+    id: nextTodoId++,
+    text
+  }
+}
+
+export const toggleTodo = (id) => {
+  return {
+    type: TOGGLE_TODO,
+    id
+  }
+}
+
 // // const FETCH_PEOPLE_FAILURE = 'FETCH_PEOPLE_FAILURE'
 
 // export function increment() {
