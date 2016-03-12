@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
-import { INCREMENT, DECREMENT } from '../actions'
+import { INCREMENT, DECREMENT, ADD_TODO, TOGGLE_TODO } from '../actions'
+import todos from './todos'
 
 const counter = (state = 0, action) => {
   switch(action.type) {
@@ -12,4 +13,9 @@ const counter = (state = 0, action) => {
   }
 }
 
-export default counter
+const rootReducer = combineReducers({
+  counter,
+  todos
+})
+
+export default rootReducer
