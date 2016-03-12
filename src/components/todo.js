@@ -1,40 +1,20 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react'
 
+const Todo = ({ onClick, completed, text }) => (
+  <li
+    onClick={onClick}
+    style={{
+      textDecoration: completed ? 'line-through' : 'none'
+    }}
+  >
+    {text}
+  </li>
+)
 
+todo.propTypes = {
+  onClick: PropTypes.func.isRequired,
+  completed: PropTypes.bool.isRequired,
+  text: PropTypes.string.isRequired
+}
 
-
-
-
-
-
-
-
-
-
-// let nextTodoId = 0;
-// class TodoApp extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <input type="text" ref="todoInput" />
-//         <button onClick={() => {
-//           store.dispatch({
-//             type: 'ADD_TODO',
-//             text: this.refs.todoInput.value,
-//             id: nextTodoId++
-//           });
-//           this.refs.todoInput.value = '';
-//         }}>
-//           Add Todo
-//         </button>
-//         <ul>
-//           {this.props.todos.map(todo => 
-//               <li key={todo.id}>
-//                 {todo.text}
-//               </li>
-//             )}
-//         </ul>
-//       </div>
-//     )
-//   }
-// }
+export default Todo
