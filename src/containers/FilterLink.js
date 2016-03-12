@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 // action
-import { setVisbilityFilter } from '../actions'
+import { setVisibilityFilter } from '../actions'
 // component
 import Link from '../components/Link'
 
