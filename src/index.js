@@ -29,3 +29,18 @@ const render = () => {
 
 store.subscribe(render)
 render()
+
+
+// toggle todo function:
+const toggleTodo = (todo) => {
+  return Object.assign({}, todo, {
+    completed: !todo.completed
+  });
+};
+
+const toggleTodoWithSpread = (todo) => {
+  return {
+    ...todo,
+    completed: !todo.completed
+  };
+};
