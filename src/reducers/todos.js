@@ -1,4 +1,4 @@
-import { ADD_TODO, TOGGLE_TODO } from '.../actions'
+import { ADD_TODO, TOGGLE_TODO } from '../actions'
 
 const todo = (state, action) => {
   switch (action.type) {
@@ -16,7 +16,7 @@ const todo = (state, action) => {
         return state
       }
 
-      return Object.assign({}, state {
+      return Object.assign({}, state, {
         completed: !state.completed
       })
 

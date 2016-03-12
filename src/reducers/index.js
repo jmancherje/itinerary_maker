@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux'
-import { INCREMENT, DECREMENT, ADD_TODO, TOGGLE_TODO } from '../actions'
+import { INCREMENT, DECREMENT } from '../actions'
 import todos from './todos'
+import visibilityFilter from './visibilityFilter'
 
 const counter = (state = 0, action) => {
   switch(action.type) {
@@ -15,7 +16,8 @@ const counter = (state = 0, action) => {
 
 const rootReducer = combineReducers({
   counter,
-  todos
+  todos,
+  visibilityFilter
 })
 
 export default rootReducer
