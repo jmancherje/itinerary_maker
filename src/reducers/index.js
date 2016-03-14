@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import { INCREMENT, DECREMENT } from '../actions'
+// other reducers
 import todos from './todos'
 import visibilityFilter from './visibilityFilter'
 
