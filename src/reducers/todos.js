@@ -1,3 +1,4 @@
+// function to abstract out functionality
 const todo = (state, action) => {
   switch (action.type) {
     case 'ADD_TODO':
